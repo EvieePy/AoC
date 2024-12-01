@@ -43,11 +43,11 @@ class InputHelper:
         }
 
     def fetch(self, renew: bool = False) -> None:
-        path = pathlib.Path(f"inputs/{self.year}/day/{self.day}")
+        path = pathlib.Path(f"inputs")
 
         if not renew and path.exists():
             try:
-                with open(path / "input.txt") as fp:
+                with open(path / f"input_{self.day}.txt") as fp:
                     self.data = fp.read()
             except (FileNotFoundError, OSError):
                 pass
@@ -62,7 +62,7 @@ class InputHelper:
             raise RuntimeError("No input data found.")
 
         path.mkdir(parents=True, exist_ok=True)
-        with open(path / "input.txt", "w") as fp:
+        with open(path / f"input_{self.day}.txt", "w") as fp:
             fp.write(self.data)
 
     def as_lines(self) -> list[str]:

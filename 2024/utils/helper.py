@@ -9,7 +9,7 @@ import requests
 __all__ = ("InputHelper",)
 
 
-with open("TOKEN") as fp:
+with open(".TOKEN") as fp:
     TOKEN: str = fp.read()
 
 if not TOKEN:

@@ -1,6 +1,6 @@
-venv
-.venv
-TOKEN
+venv*
+.venv*
+.TOKEN
 /inputs
 .ruff_cache
 __pycache__

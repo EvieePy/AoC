@@ -4,3 +4,4 @@ venv*
 /inputs
 .ruff_cache
 __pycache__
+EXAMPLE*

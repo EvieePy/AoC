@@ -5,9 +5,8 @@ import (
 	"os"
 )
 
-
 func main() {
-    args := append(os.Args[1:], "0")
+	args := append(os.Args[1:], "0")
 
 	switch args[0] {
 	case "1":

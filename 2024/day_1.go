@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func splatter(data []string) ([]int, []int) {
+func d1_splatter(data []string) ([]int, []int) {
 	var left []int
 	var right []int
 
@@ -32,7 +32,7 @@ func absInt(number int) int {
 	return number
 }
 
-func main() {
+func d1() {
 	total_one := 0
 	total_two := 0
 
@@ -43,7 +43,7 @@ func main() {
 
 	lines := strings.Split(string(data), "\r\n")
 
-	left, right := splatter(lines)
+	left, right := d1_splatter(lines)
 	slices.Sort(left)
 	slices.Sort(right)
 
@@ -52,7 +52,7 @@ func main() {
 		total_one += absInt(right[i] - n)
 	}
 
-	fmt.Printf("TOTAL ONE: %d\n", total_one)
+	fmt.Printf("DAY ONE TOTAL_ONE: %d\n", total_one)
 
 	// PART 2:
 	mapping := make(map[int]int)
@@ -64,5 +64,5 @@ func main() {
 		total_two += (num * mapping[num])
 	}
 
-	fmt.Printf("TOTAL TWO: %d\n", total_two)
+	fmt.Printf("DAY ONE TOTAL_TWO: %d\n", total_two)
 }

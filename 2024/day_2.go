@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// ...
 func d2_check(nums []int) int {
 	prev := 0
 	prev_dist := 0

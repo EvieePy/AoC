@@ -47,7 +47,7 @@ func d1() {
 	slices.Sort(left)
 	slices.Sort(right)
 
-	// left minus right (abs)...
+	// left minus right (abs)....
 	for i, n := range left {
 		total_one += absInt(right[i] - n)
 	}
